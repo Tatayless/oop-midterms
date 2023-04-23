@@ -1,33 +1,22 @@
-// DONT CHANGE
+// DONT CHANGE PLEASE
 
 interface AbstractMinecraftObject {
-    name: string;
-    id: number;
-    isCraftable: boolean;
-    isEnchantable: boolean;
-    stackSize: number;
-    durability: number;
-    useType: string;
-    damageDealt: number;
-    flammable: boolean;
-    explosionResistance: number;
-
-    getDurability(): number;
     getName(): string;
-    getID(): number;
+    getDurability(): number;
+    getItemAmount(): number;
 }
 
-class MinecraftItem {
+class MinecraftItem implements AbstractMinecraftObject {
     public name: string;
     private itemInHand: number;
     public isCraftable: boolean;
     public isEnchantable: boolean;
     public stackSize: number;
     private durability: number;
-    protected useType: string;
+    private useType: string;
     private damageDealt: number;
-    private flammable: boolean;
-    private explosionResistance: number;
+    public flammable: boolean;
+    public explosionResistance: number;
 
     constructor(itemName: string, itemAmount: number, craftable: boolean, enchantable: boolean, stack: number,
     durabilityLeft: number, use: string, damage: number, flammability: boolean, resistance: number) {
@@ -43,36 +32,36 @@ class MinecraftItem {
         this.explosionResistance = resistance;
     }
 
-    getDurability(): number {
+    public getName(): string {
+        return this.name;
+    }
+    
+    public getDurability(): number {
         return this.durability;
     }
 
-    getName(): string {
-        return this.name;
-    }
-
-    getItemAmount(): number {
+    public getItemAmount(): number {
         return this.itemInHand;
     }
 
-    getCraftingRecipe(): void {
+    public getCraftingRecipe(): void {
     }
     
-    getEnchantments(): void {
+    public getEnchantments(): void {
     }
 
-    craft(amount: number): void {
+    public craft(amount: number): void {
     }
 
-    enchant(enchantment: string): void {
+    public enchant(enchantment: string): void {
     }
 
-    attack(): void {
+    public attack(): void {
     }
 
-    place(): void {
+    public place(): void {
     }
 
-    repair(): void {
+    public repair(): void {
     }
 }
