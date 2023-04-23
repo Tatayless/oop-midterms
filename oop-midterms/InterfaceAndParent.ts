@@ -2,20 +2,22 @@
 
 interface AbstractMinecraftObject {
     getName(): string;
-    getDurability(): number;
+    getDurability(): void;
     getItemAmount(): number;
+    getEnchantability(): boolean;
+    getCraftability(): boolean;
 }
 
-class MinecraftItem implements AbstractMinecraftObject {
+export class MinecraftItem implements AbstractMinecraftObject {
     public name: string;
-    private itemInHand: number;
-    public isCraftable: boolean;
-    public isEnchantable: boolean;
+    public itemInHand: number;
+    private isCraftable: boolean;
+    private isEnchantable: boolean;
     public stackSize: number;
-    private durability: number;
+    public durability: number;
     private useType: string;
     private damageDealt: number;
-    public flammable: boolean;
+    private flammable: boolean;
     public explosionResistance: number;
 
     constructor(itemName: string, itemAmount: number, craftable: boolean, enchantable: boolean, stack: number,
@@ -44,10 +46,16 @@ class MinecraftItem implements AbstractMinecraftObject {
         return this.itemInHand;
     }
 
-    public getCraftingRecipe(): void {
+    public getCraftability(): boolean {
+        return this.isCraftable;
     }
     
-    public getEnchantments(): void {
+    public getEnchantability(): boolean {
+        return this.isEnchantable;
+    }
+
+    public getDamage(): number {
+        return this.damageDealt;
     }
 
     public craft(amount: number): void {
@@ -56,10 +64,10 @@ class MinecraftItem implements AbstractMinecraftObject {
     public enchant(enchantment: string): void {
     }
 
-    public attack(): void {
+    public firstUse(): void {
     }
 
-    public place(): void {
+    public secondUse(): void {
     }
 
     public repair(): void {
