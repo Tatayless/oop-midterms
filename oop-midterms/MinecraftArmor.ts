@@ -26,6 +26,14 @@ class MinecraftArmor extends MinecraftItem {
         this.durability -= this.durabilityLostPerUse * this.explosionResistance;
     }
 
+    public getWornStatus(): string {
+        if (this.wornOrNot == 0) {
+            return `${this.name} is not worn!`;
+        }
+        else {
+            return `${this.name} is worn!`;
+        }
+    }
 
     public secondUse(): void {
         if (this.wornOrNot == 0) {
@@ -96,6 +104,7 @@ DiamondArmor.enchant('Thorns III');
 console.log(DiamondArmor.getEnchantments());
 DiamondArmor.secondUse();
 console.log(DiamondArmor.getArmorPoints());
+console.log(DiamondArmor.getWornStatus());
 DiamondArmor.secondUse();
 
 console.log(DiamondArmor.getItemAmount());
