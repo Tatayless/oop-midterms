@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// DONT CHANGE PLEASE
+// DONT CHANGE PLEASE!!
 const InterfaceAndParent_js_1 = require("./InterfaceAndParent.js");
 class MinecraftTool extends InterfaceAndParent_js_1.MinecraftItem {
     constructor(itemName, itemAmount, craftable, enchantable, stack, durabilityLeft, use, damage, flammability, resistance, miningSpeed, durabilityLostPerUse, miningLevel) {
