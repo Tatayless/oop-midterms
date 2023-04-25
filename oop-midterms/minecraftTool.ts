@@ -1,4 +1,4 @@
-// DONT CHANGE PLEASE
+// DONT CHANGE PLEASE!
 import { MinecraftItem } from "./InterfaceAndParent.js";
 
 class MinecraftTool extends MinecraftItem {
@@ -50,7 +50,7 @@ class MinecraftTool extends MinecraftItem {
 
 
     sharpen(): void {
-        this.damageDealt *= 2;
+        this.damageDealt *= 3;
     }
 
     getMiningSpeed(): number {
