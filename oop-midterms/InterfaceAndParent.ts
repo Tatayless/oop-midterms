@@ -8,15 +8,15 @@ interface AbstractMinecraftObject {
     getCraftability(): boolean;
 }
 
-export class MinecraftItem implements AbstractMinecraftObject {
+export abstract class MinecraftItem implements AbstractMinecraftObject {
     public name: string;
     public itemInHand: number;
     private isCraftable: boolean;
     private isEnchantable: boolean;
     public stackSize: number;
     public durability: number;
-    private useType: string;
-    private damageDealt: number;
+    protected useType: string;
+    protected damageDealt: number;
     private flammable: boolean;
     public explosionResistance: number;
 
