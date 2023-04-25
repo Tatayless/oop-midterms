@@ -1,7 +1,5 @@
 import {MinecraftItem} from "./InterfaceAndParent.js";
 
-
-
 class MinecraftBlock extends MinecraftItem {
     public hardness: number;
     public blastResistance: number;
