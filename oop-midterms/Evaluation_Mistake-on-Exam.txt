@@ -1,0 +1,16 @@
+Anthony John Aparicio
+    Knowledge: 3
+    Contribution: 4
+
+James Matthew Dumdum
+    Knowledge: 3
+    Contribution: 4
+
+Jake Edmund Pacificador
+    Knowledge: 3
+    Contribution: 4
+
+Mistake on the Exam:
+        The mistake that we noticed was that there had to be an implementation in the interface.
+    To our knowledge, interfaces cannot have defined properties or implementation of methods.
+    Interfaces only define a specific structure for a class or object to follow.
