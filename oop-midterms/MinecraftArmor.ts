@@ -86,27 +86,27 @@ class MinecraftArmor extends MinecraftItem {
     }
 }
 
-let DiamondArmor = new MinecraftArmor('Diamond Shoes', 1, true, true, 1, 365, 'Wearing', 0, true, 1, 2.5, 'Diamond', 3, "4 Diamonds")
+let diamondArmor = new MinecraftArmor('Diamond Shoes', 1, true, true, 1, 365, 'Wearing', 0, true, 1, 2.5, 'Diamond', 3, "4 Diamonds")
 
-console.log(DiamondArmor.getDurability());
-console.log(DiamondArmor.getDamage());
-DiamondArmor.firstUse();
-console.log(DiamondArmor.getDurability());
-console.log(DiamondArmor.getCraftingRecipe());
-DiamondArmor.craft(3);
-DiamondArmor.repair();
-console.log(DiamondArmor.getDurability());
+console.log(diamondArmor.getDurability());
+console.log(diamondArmor.getDamage());
+diamondArmor.firstUse();
+console.log(diamondArmor.getDurability());
+console.log(diamondArmor.getCraftingRecipe());
+diamondArmor.craft(3);
+diamondArmor.repair();
+console.log(diamondArmor.getDurability());
 
 console.log();
 
-console.log(DiamondArmor.getEnchantability());
-DiamondArmor.enchant('Protection V');
-console.log(DiamondArmor.getEnchantments());
-DiamondArmor.enchant('Thorns III');
-console.log(DiamondArmor.getEnchantments());
-DiamondArmor.secondUse();
-console.log(DiamondArmor.getArmorPoints());
-console.log(DiamondArmor.getWornStatus());
-DiamondArmor.secondUse();
+console.log(diamondArmor.getEnchantability());
+diamondArmor.enchant('Protection V');
+console.log(diamondArmor.getEnchantments());
+diamondArmor.enchant('Thorns III');
+console.log(diamondArmor.getEnchantments());
+diamondArmor.secondUse();
+console.log(diamondArmor.getArmorPoints());
+console.log(diamondArmor.getWornStatus());
+diamondArmor.secondUse();
 
-console.log(DiamondArmor.getItemAmount());
+console.log(diamondArmor.getItemAmount());

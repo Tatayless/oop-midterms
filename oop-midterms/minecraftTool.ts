@@ -19,25 +19,25 @@ class MinecraftTool extends MinecraftItem {
 
 
 
-    mine(): void {
+    public mine(): void {
         this.durability -= this.durabilityLostPerUse;
     }
 
-    repair(): void {
+    public repair(): void {
         this.durability = this.stackSize * this.getDurability();
     }
 
  
-    getName(): string {
+    public getName(): string {
         return "Tool: " + this.name;
     }
     
-    getuseType(): string{
+    public getUseType(): string{
         return "Use: " + this.useType;
     }
 
    
-    attack(target: MinecraftItem): void {
+    public attack(target: MinecraftItem): void {
         if (target instanceof MinecraftTool) {
             target.durability -= this.damageDealt / target.miningLevel;
         } else {
@@ -45,28 +45,28 @@ class MinecraftTool extends MinecraftItem {
         }
     }
 
-    upgradeMiningLevel(level: number): void {
+    public upgradeMiningLevel(level: number): void {
         this.miningLevel += level;
     }
     
 
 
-    sharpen(): void {
+    public sharpen(): void {
         this.damageDealt *= 3;
     }
 
-    getMiningSpeed(): number {
+    public getMiningSpeed(): number {
         return this.miningSpeed;
     }
 
-    getMiningLevel(): number {
+    public getMiningLevel(): number {
         return this.miningLevel;
     }
 }
 
 const pickaxe = new MinecraftTool("Diamond Pickaxe", 1, true, true, 1, 1500, "Mining", 0, false, 0, 5, 50, 5)
 console.log(pickaxe.getName()); // output: item name
-console.log(pickaxe.getuseType()) // output: item use
+console.log(pickaxe.getUseType()) // output: item use
 console.log("Item amount: " + pickaxe.getItemAmount()) // output: 1
 console.log("Item durability: " + pickaxe.getDurability()); // Output: 150
 
