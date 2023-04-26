@@ -1,6 +1,8 @@
 // DONT CHANGE PLEASE!
 import { MinecraftItem } from "./InterfaceAndParent.js";
 
+// Jake Edmund Pacificador
+
 class MinecraftTool extends MinecraftItem {
     private miningSpeed: number;
     private miningLevel: number;

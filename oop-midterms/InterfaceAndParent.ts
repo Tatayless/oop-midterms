@@ -1,5 +1,7 @@
 // DONT CHANGE PLEASE
 
+// Pro (wow) - Anthony John Aparicio
+
 interface AbstractMinecraftObject {
     getName(): string;
     getDurability(): void;

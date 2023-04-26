@@ -1,6 +1,8 @@
 // put our child classes here
 import { MinecraftItem } from "./InterfaceAndParent.js";
 
+// Anthony John Aparicio
+
 class MinecraftArmor extends MinecraftItem {
     private armorPoints: number;
     private wornOrNot: number = 0;

@@ -1,6 +1,6 @@
 import {MinecraftItem} from "./InterfaceAndParent.js";
 
-
+// James Matthew Dumdum
 
 class MinecraftBlock extends MinecraftItem {
     public hardness: number;
